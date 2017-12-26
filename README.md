@@ -5,6 +5,8 @@ For those who are not marine. AIS was sadly known during the crisis of ship kidn
 
 This year I have known that the Greek company Marine Traffic offers a free appliance for receive AIS if you are living in an strategic place and send the data to them.
 
+![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_Architecture.png)
+
 What's AIS?
 ===========
 The marine Automatic Identification System [(AIS)](https://en.wikipedia.org/wiki/Automatic_identification_system) is a location and vessel information reporting system. It allows vessels equipped with AIS to automatically and dynamically share and regularly update their position, speed, course and other information such as vessel identity with similarly equipped vessels or shore installations. Position is derived from the Global Positioning System (GPS) and communication uses Very High Frequency (VHF) digital transmissions.
@@ -14,18 +16,26 @@ My station
 
 I've deployed an AIS station based on:
 * SLR350Ni AIS Receiver Unit based on Raspberry Pi
-* GP-3E ANTENNA
 ![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_Receiver.jpg)
-You can look at the [station dashboard's](http://www.marinetraffic.com/en/ais/details/stations/4050 "Marine Traffic") via Marine Traffic
+* GP-3E ANTENNA
+
+The device allows to connect throught HTTP for administration and to show this dashboard:
+![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_WebConsole.png)
+
+Marine Traffic provides a public web page of each station. I have de Id: 4050. So you can see [here the station dashboard's](http://www.marinetraffic.com/en/ais/details/stations/4050 "Marine Traffic")
 
 Decode AIS
 ==========
 
 The [GPSD Project](http://catb.org/gpsd/AIVDM.html) has documented the AIS protocol on this page
 
+**types of transceiver estations:**
+
+***Class A transceivers.** These are designed to be fitted to large vessels such as cargo ships and large passenger vessels. Class A transceivers transmit at a high RF signal power and therefore can be received by more distant vessels. They also transmit more frequently. Class A transceivers are mandatory on all vessels over 300 gross tonnes on international voyages and certain types of passenger vessels under SOLAS regulations.
+***Class B transceivers.** Similar to class A transceivers in many ways, but are normally lower cost due to the less stringent performance requirements. Class B transceivers transmit at a lower power and at a lower reporting rate than class A transceivers.
+
 Small extract of this great decoding manual from Eric S. Raymond [@esrtweet](https://twitter.com/esrtweet "Twitter")
 Don't hesitate to help the project on [Gratipay](https://gratipay.com/~esr/)
-
 
 **Fast explanation about what the fields mean:**
 
@@ -55,7 +65,7 @@ For comparison, here is an example of a multifragment sentence with a nonempty m
 Technically, NMEA0183 does not actually require that a !-led sentence be AIS. This format can be used for any encapsulated data. The syntax and semantics of fields 1-4 are fixed, and the fill-bit field and NEA checksum are required, but the payload fields may contain any encapsulated data.
 It is, however, a safe bet that any such sentence containing an A or B channel code in field 5 is AIVDM/AIVDO.
                                                                                                                
-
+													       
 **You can decode AIS NMEA message with many tools:**
 
 [**libais**](https://pypi.python.org/pypi/libais) is a good start in Python there are references to other tools on the project page.
@@ -134,29 +144,4 @@ _TODO: Concatenate the two data payload below and don't forget to replace the 0 
 	u'imo_num': 0L
 	}`
 
-Licence
-=======               
-                                                                       
-
-**The data are published under the licence [Creative Commons 4 By](http://creativecommons.org/licenses/by/4.0/)**
-
-###You are free to:
-
-*   Share — copy and redistribute the material in any medium or format
-   Adapt — remix, transform, and build upon the material
-   for any purpose, even commercially.
-
-*   The licensor cannot revoke these freedoms as long as you follow the license terms.
-
-###Under the following terms:
-
-*   Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
-   You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-*   No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-###Notices:
-
-You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
-No warranties are given. The license may not give you all of the permissions necessary for your intended use.
-For example, other rights such as publicity, privacy, or moral rights may limit how you use the material
+![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_Antenna.jpg)
