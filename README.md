@@ -15,11 +15,14 @@ My station
 ==========
 
 I've deployed an AIS station based on:
-* SLR350Ni AIS Receiver Unit based on Raspberry Pi
-![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_Receiver.jpg)
+
 * GP-3E ANTENNA
+* SLR350Ni AIS Receiver Unit based on Raspberry Pi
+
+![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_Receiver.jpg)
 
 The device allows to connect throught HTTP for administration and to show this dashboard:
+
 ![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_WebConsole.png)
 
 Marine Traffic provides a public web page of each station. I have de Id: 4050. So you can see [here the station dashboard's](http://www.marinetraffic.com/en/ais/details/stations/4050 "Marine Traffic")
