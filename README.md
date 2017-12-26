@@ -15,7 +15,7 @@ My station
 I've deployed an AIS station based on:
 * SLR350Ni AIS Receiver Unit based on Raspberry Pi
 * GP-3E ANTENNA
-![alt text](https://github.com/McOrts/AIS-ship-tracking-receiver/images/blob/master/AIS-ship-tracking-receiver_Receiver.JPG?raw=true)
+![alt text](https://raw.githubusercontent.com/McOrts/AIS-ship-tracking-receiver/master/images/AIS-ship-tracking-receiver_Receiver.jpg)
 You can look at the [station dashboard's](http://www.marinetraffic.com/en/ais/details/stations/4050 "Marine Traffic") via Marine Traffic
 
 Decode AIS
